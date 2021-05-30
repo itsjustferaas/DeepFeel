@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   app:behavior_hideable="true"
+                                                   app:behavior_peekHeight="124dp"
+                                                   app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent" android:id="@+id/bottom_sheet"
+                                                   android:background="@android:color/white">
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:onClick="cameraFaceDetection" app:srcCompat="@drawable/ic_camera_alt_black"
+            android:id="@+id/camera_image_view_text_recognition"
+            android:background="@drawable/border" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/camera_description"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:onClick="galleryFaceDetection" app:srcCompat="@drawable/ic_add_black"
+            android:id="@+id/gallery_image_view_text_recognition"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/camera_image_view_text_recognition"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/border" android:contentDescription="@string/gallery_description"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_image_labeling"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            tools:text="@string/text_view_text_recognition" android:textSize="18sp"
+            android:textColor="@android:color/black" android:padding="8dp"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/gallery_image_view_text_recognition"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>
